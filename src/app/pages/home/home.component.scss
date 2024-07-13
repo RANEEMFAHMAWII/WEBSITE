@@ -1,0 +1,130 @@
+.backgroundHome {
+  background-image: url("../../../assets/img/homeBG.jpg") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.top {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+  // padding-left: 0 90px 0 90px;
+}
+
+.top .item {
+  max-width: 360px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// .top .item h3 {
+//   font-family: tshgeel-heavy, 'Tajawal', sans-serif;
+//   font-size: 46px;
+// }
+
+.item:nth-child(3) {
+  font-size: 20px;
+  word-spacing: 4px;
+}
+h1{
+  font-family: tshgeel-heavy, "Tajawal", sans-serif;
+  font-weight: bold;
+}
+.top .item > * {
+  text-align: center;
+}
+
+h3 {
+  font-family: tshgeel-heavy, "Tajawal", sans-serif;
+  font-size: 46px;
+  text-align: center;
+  margin-top: -128px;
+  /* padding: 55px; */
+  color: white;
+
+}
+
+.about-us {
+  padding: 5vh 0 0 0;
+  text-align: center;
+}
+
+.about-us span, .about-us h3 {
+  font-family: tshgeel-heavy, 'Tajawal', sans-serif;
+}
+
+.about-us span {
+  font-size: 15pt;
+  font-weight: bolder;
+}
+
+.about-us span::after, .about-us span::before {
+  content: '   ';
+}
+
+.about-us h3 img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(100%) contrast(100%);
+  background-position: top;
+}
+
+#packages {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  #bg-shared {
+      margin-bottom: 70vh;
+  }
+
+  #bg-shared::before {
+      background-image: url("../../../assets/img/homeBG.jpg") !important;
+      background-position: center;
+      background-position-x: 0px;
+      background-size: cover !important;
+      height: 70vh;
+  }
+
+  .top {
+      height: 35vh;
+      margin-top: 10vh;
+      padding-left: 10px;
+      align-items: center;
+  }
+
+  .item:nth-child(2) img {
+      max-width: 50vw;
+  }
+
+  .top .item h3 {
+      font-size: 29pt;
+  }
+
+  .item:nth-child(4) {
+      max-width: none;
+      width: 75%;
+      padding: 0px 0px !important;
+      justify-content: space-between;
+  }
+
+  .btn.btn-primary {
+      padding: 5px 10px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #bg-shared {
+      margin-bottom: 10vh;
+  }
+
+  #bg-shared::before {
+      background-size: 100% 70% !important;
+  }
+}

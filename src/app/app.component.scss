@@ -1,0 +1,54 @@
+#splash{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: -webkit-linear-gradient(black, rgba(255, 255, 255, 0.2));
+    align-items: center;
+    -webkit-backdrop-filter: saturate(180%) blur(30px);
+    backdrop-filter: saturate(180%) blur(15px);
+    animation-name: fade-out;
+    animation-duration: 3s;
+    animation-delay: 3s;
+   
+    img{
+        width: 50%;
+        animation-name: fade-in;
+        animation-duration: 2.5s;
+    } 
+}
+#splash::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right:0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(45deg,#3c3e3f,#292b2d,#151517,black);
+    background-size: 400% 400%;
+    border-radius: 5px;
+    z-index: -1;
+    animation: neon 5s linear;
+}
+
+
+@keyframes neon {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes fade-in {
+    from {opacity: 0;filter: brightness(0.3);}
+    to {opacity: 1;filter: brightness(2);}
+}
+@keyframes fade-out {
+    from {opacity: 1;filter: brightness(2);}
+    to {opacity: 0;filter: brightness(0);}
+}
+#content{
+    background-color: #F3F2F2;
+}

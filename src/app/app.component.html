@@ -1,0 +1,9 @@
+<div *ngIf="showSplash" id="splash">
+    <img class="fade-out fade-in" src="../assets/img/logo.png" width="50vw" >
+</div>
+<div *ngIf="!showSplash" id="content" class="">
+    <app-loader></app-loader>
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>

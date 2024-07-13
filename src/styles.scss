@@ -1,0 +1,291 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&family=Roboto:wght@100&family=Tajawal:wght@400;500;700;800&display=swap');
+
+@font-face {
+    font-family: tshgeel, 'Tajawal', sans-serif,;
+    src: url(assets/fonts/Nexa.otf);
+}
+
+@font-face {
+    font-family: tshgeel-heavy, 'Tajawal', sans-serif,;
+    src: url(assets/fonts/Nexa-Heavy.otf);
+}
+
+* {
+    font-family: tshgeel, 'Tajawal', sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+// Body
+body {
+    color: #22204F !important;
+    background-color: #000;
+}
+// *{
+//     color: #22204F !important;
+// }
+.navbar-toggler{
+    color: white !important;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+#bg-shared {
+    // background-image: url("assets/img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    // width: 100vw;
+    // min-height: 100%;
+    // padding-top: 60px;
+    // margin-top: -60px;
+    position: relative;
+    // background-color: #F3F2F2;
+}
+.btn{
+    border-color: #22204F !important;
+}
+.btn-outline-primary{
+    color: #22204F !important;
+}
+.btn-primary{
+    background: linear-gradient(90deg, rgba(34,32,79,1) 0%, rgba(114,33,91,1) 92%) !important;
+    color: white !important;
+}
+.btn{
+    font-family: tshgeel-heavy, 'Tajawal', sans-serif,;
+    font-size: 13px;
+    border-radius: 3px;
+    // background-color: #fff
+}
+.btn:hover{
+    color: black;
+    background-color: #fff
+}
+.btn-outline-primary,.btn-outline-primary:hover{
+    border-color: white;
+    color: white;
+    border-radius: 3px;
+    padding: 6px 23px;
+}
+.btn-outline-primary:hover{
+    color: black;
+}
+.btn-outline-primary:active{
+    color: black !important;
+    background-color: #fff !important;
+    border-color: white !important;
+}
+select.tshgheel-input,
+input.tshgheel-input,
+textarea.tshgheel-input{
+    width: 100%;
+    background-color: transparent !important;
+    border: 0.5px solid #22204F;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #22204F !important;
+}
+select.tshgheel-input{
+  padding: 10px !important;
+}
+input.tshgheel-input::placeholder,
+textarea.tshgheel-input::placeholder{
+    color: #22204F;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color:#22204F ;
+}
+input::placeholder:hover,input::placeholder:focus,input::placeholder:active{
+    color: white;
+}
+input.tshgheel-input{
+    height: 50px;
+}
+textarea{
+    resize: none !important;
+}
+
+.has-error {
+    border: 1px solid red;
+    border-radius: 5px;
+}
+h3{
+    font-family: tshgeel-heavy, 'Tajawal', sans-serif;
+    text-transform: uppercase;
+}
+.anchor {
+  color: #22204F;
+}
+.shared-container{
+    border: solid;
+    border-radius: 5px;
+    // border-color: white;
+    padding: 36px;
+    height: fit-content;
+    border-width: 0.5px;
+    color: #22204F;
+}
+.container{
+    color: #22204F;
+    border-color: #22204F;
+}
+.form-select{
+    background-color: transparent;
+    // color: white;
+    padding: 14px;
+    border-radius: 5px;
+    // border-color: white;
+    border-width: 0.5px;
+}
+.form-select:focus{
+    border-color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+.card{
+    border: solid;
+    border-radius: 5px;
+    height: fit-content;
+    border-width: 0.5px;
+    background-color: transparent;
+}
+.card-footer{
+    // border-top: 0.5px solid white;
+    padding: 20px 15px;
+}
+.form-check-input{
+    background-color: transparent;
+}
+.heavy{
+    font-family: tshgeel-heavy, 'Tajawal', sans-serif,;
+}
+.heading {
+    font-size: 2.5rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #22204F;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+#bg-shared::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    flex-grow: 1;
+    background-image: url("./assets/img/homeBG.jpg");
+    background-size: cover; /* Adjust as needed */
+    // z-index: -1; /* Position behind the content */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.py-0-8 {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+.form-select {
+
+    option{
+    color: #000;
+    padding: 10px 0;
+    display: inline-block;
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+}
+.btn:disabled {
+    color: black;
+    border: none;
+}
+
+
+
+.control-buttons{
+    // height: 30vh;
+    align-items: center;
+    .prev::before,.next::after{
+        content: '|';
+    }
+    .prev:hover,.next:hover {
+        color: black;
+    }
+}
+::ng-deep .rtl {
+    .control-buttons{
+        flex-direction: row-reverse;
+        .prev::before,.next::after{
+            content: '' !important;
+        }
+        .prev::after,.next::before{
+            content: '|' !important;
+        }
+    }
+}
+.prev,.next{
+    color: #22204F !important;
+}
+
+
+
+.carousel-item.item4.active{
+    .btn.prev{
+        opacity: 1;
+        cursor:pointer
+    }
+    .btn.next{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+.carousel-item{
+    .item2.active,.item3.active{
+        .btn.prev,.btn.next{
+            opacity: 1;
+            cursor:pointer
+        }
+    }
+}
+.carousel-item.item1.active + .d-flex .btn.prev{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.fa-xl{
+    font-size: 1.3rem !important;
+}
+
+@media screen and (max-width: 500px) {
+
+    #bg-shared{
+        height: 35vh;
+        margin-bottom: 5vh;
+    }
+    #bg-shared::before{
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35vh;
+    }
+}
+

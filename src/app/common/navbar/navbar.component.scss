@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 60px;
+  -webkit-backdrop-filter: saturate(180%) blur(30px);
+  backdrop-filter: saturate(180%) blur(15px);
+  transition: 0.2s;
+
+  .lang {
+    .btn {
+      background-color: #f1f2f7;
+      font-size: 16px;
+      padding: 2px 15px;
+      border-color: white !important;
+      color: #000 !important; /* Set text color to black */
+      &:hover {
+        color: #38d285 !important;
+      }
+    }
+  }
+
+  .btn-close,
+  .navbar-toggler {
+    color: #fff !important;
+    border: none !important;
+    outline: none !important;
+    background: none;
+    box-shadow: none !important;
+  }
+
+  .nav-item .nav-link {
+    color: #000 !important; /* Set default link color to black */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nav-item * {
+    color: #000 !important; /* Set default text color to black */
+  }
+
+  .nav-item.active .nav-link {
+    color: #04a637 !important; /* Set active link color */
+  }
+
+  .nav-item:visited,
+  .nav-item:active,
+  .nav-item:focus,
+  .nav-item:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.sticky-top {}
+
+.navbar-inverse {
+  -webkit-backdrop-filter: saturate(180%) blur(30px);
+  backdrop-filter: saturate(180%) blur(15px);
+  transition: 0.2s;
+
+  .lang .btn {
+    color: #000 !important; /* Set text color to black */
+  }
+
+  .nav-item .nav-link {
+    color: #000 !important; /* Set link color to black */
+  }
+
+
+}
+
+.navbar-inverse-phone {
+  transition: 0.2s;
+
+  .lang .btn {
+    color: #000 !important; /* Set text color to black */
+  }
+
+  .nav-item .nav-link {
+    color: #000 !important; /* Set link color to black */
+  }
+
+  .nav-item.active .nav-link {
+    color: #04a637 !important; /* Set active link color */
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-item.dropdown,
+  .nav-item.dropdown ul {
+    background-color: transparent;
+  }
+
+  .nav-item.dropdown ul a {
+    color: #fff !important; /* Set dropdown link color */
+  }
+
+  .offcanvas-bg {
+    backdrop-filter: saturate(180%) blur(30px);
+    max-width: 300px;
+  }
+
+  .offcanvas {
+    height: 100vh;
+
+    .navbar-nav {
+      justify-content: start !important;
+    }
+  }
+
+  .navbar .lang .btn {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (width: 992px) {
+  .offcanvas-bg {
+    backdrop-filter: saturate(180%) blur(30px);
+    max-width: fit-content;
+  }
+}

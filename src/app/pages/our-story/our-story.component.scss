@@ -1,0 +1,152 @@
+.packages {
+  padding-top: 6%;
+}
+
+.containerHR {
+  max-width: 10%;
+  box-sizing: border-box;
+}
+
+.hr-lines {
+  position: relative;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.hr-lines:before, .hr-lines:after {
+  content: " ";
+  height: 2px;
+  width: 10%;
+  background: #eab317;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.textSt{
+    margin-top: -2%;
+}
+.hr-lines:before {
+  left: 0;
+}
+
+.hr-lines:after {
+  right: 0;
+}
+
+h1 {
+  font-size: 46px;
+  margin: 0;
+  font-weight: bold;
+  color: #9d6a32;
+  font-family: tshgeel-heavy, "Tajawal", sans-serif;
+}
+h6{
+  color: #eab317;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+}
+.wave-container {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #f4e9d7;
+  --mask:
+    radial-gradient(22.36px at 50% 30px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 51% repeat-x,
+    radial-gradient(22.36px at 50% -20px, #0000 99%, #000 101%) 50% 10px/40px calc(51% - 10px) repeat-x,
+    radial-gradient(22.36px at 50% calc(100% - 30px), #000 99%, #0000 101%) 50% 100%/40px 51% repeat-x,
+    radial-gradient(22.36px at 50% calc(100% + 20px), #0000 99%, #000 101%) calc(50% - 20px) calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+.abt-bg {
+  background-image: url(../../../assets/img/wheatGreen.jpg);
+  height: 200px;
+  width: 100%;
+  margin-top: 10%;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.abt-bg:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #051922;
+  opacity: 0.3;
+}
+
+.abt-section .abt-text {
+  padding: 50px;
+  padding-left: 30px;
+  margin-top: 10%;
+}
+.sizeImge{
+  width: 91%;
+  height: 140%;
+}
+.abt-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.abt-text p.top-sub {
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.abt-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hr-lines:before, .hr-lines:after {
+    width: 30%; /* Adjust line width for smaller screens */
+  }
+
+  .abt-bg {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .abt-section .abt-text {
+    padding: 20px; /* Adjust text padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hr-lines:before, .hr-lines:after {
+    width: 40%; /* Further adjust line width for very small screens */
+  }
+
+  h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+  .image-col, .col-md-6 {
+    padding: 10px;
+  }
+
+  .text-content {
+    padding: 15px;
+  }
+
+  .abt-bg {
+    height: 100px; /* Further adjust image height for very small screens */
+  }
+}

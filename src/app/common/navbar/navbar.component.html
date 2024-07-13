@@ -1,0 +1,64 @@
+<div class="inverse sticky-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+        aria-controls="offcanvasNavbar2" aria-label="Toggle navigation" (click)="removeNavbarInverse()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </button>
+      <a class="navbar-brand m-0" routerLink="/home">
+        <img src="./assets/img/leafLoading.png" alt="Farm" height="30px" />
+      </a>
+      <div id="offcanvas" class="offcanvas offcanvas-start offcanvas-bg" tabindex="-1" id="offcanvasNavbar2"
+        aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+            <a routerLink="/home">
+              <img src="./assets/img/leafLoading.png" alt="Farm" height="30px" />
+            </a>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1">
+            <li class="nav-item">
+              <button class="nav-link" routerLink="/home" [class.active]="isActive('/home')" (click)="scroll('home')">
+                {{ "home" | translate }}
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" routerLink="/ourStory" [class.active]="isActive('/ourStory')"
+                (click)="scroll('ourStory')">
+                {{ "ourStory" | translate }}
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" routerLink="/products" [class.active]="isActive('/products')"
+                (click)="scroll('products')">
+                {{ "products" | translate }}
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" routerLink="/vision" [class.active]="isActive('/vision')"
+                (click)="scroll('vision')">
+                {{ "vision" | translate }}
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" routerLink="/testimonial" [class.active]="isActive('/testimonial')"
+                (click)="scroll('testimonial')">
+                {{ "testimonial" | translate }}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="lang float-end">
+        <button class="btn btn-outline-primary" (click)="switchLang()">
+          {{ lang === 'ar' ? 'English' : 'العربية' }}
+        </button>
+      </div>
+    </nav>
+  </div>
+</div>
